@@ -12,7 +12,7 @@ public class Rectangle implements Observable {
     private int id;
     private double sideA;
     private double sideB;
-    private List<Observer> observers = new ArrayList<>();
+    private final List<Observer> observers = new ArrayList<>();
 
     public Rectangle(int id, double sideA, double sideB) {
         this.id = id;
