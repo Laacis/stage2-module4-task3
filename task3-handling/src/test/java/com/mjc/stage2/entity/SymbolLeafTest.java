@@ -9,7 +9,7 @@ public class SymbolLeafTest {
     @BeforeEach
     public void setup() {
         character = 'c';
-        leaf = new SymbolLeaf(character, TextComponentType.SYMBOL);
+        leaf = new SymbolLeaf(character);
     }
     @Test
     public void SymbolLeafOperationReturnsString() {
@@ -19,7 +19,7 @@ public class SymbolLeafTest {
     @Test
     public void SymbolLeafAddMethodThrowsException() {
         try {
-            leaf.add(new SymbolLeaf('k', TextComponentType.SYMBOL));
+            leaf.add(new SymbolLeaf('k'));
             assert false : "Expected UnsupportedOperationException not thrown";
         }catch (UnsupportedOperationException e){
             e.getMessage();
@@ -28,7 +28,7 @@ public class SymbolLeafTest {
 
     @Test
     public void SymbolLeafRemoveMethodThrowsException() {
-        SymbolLeaf leaf1 = new SymbolLeaf('k', TextComponentType.SYMBOL);
+        SymbolLeaf leaf1 = new SymbolLeaf('k');
 
         try {
             leaf.remove(leaf1);

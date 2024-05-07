@@ -13,9 +13,9 @@ public class TextComponentTest {
 
     @BeforeEach
     public void setup() {
-        leaf1 = new SymbolLeaf('a', TextComponentType.SYMBOL);
-        leaf2 = new SymbolLeaf('b', TextComponentType.SYMBOL);
-        leaf3 = new SymbolLeaf('c', TextComponentType.SYMBOL);
+        leaf1 = new SymbolLeaf('a');
+        leaf2 = new SymbolLeaf('b');
+        leaf3 = new SymbolLeaf('c');
         textComponentWord1 = new TextComponent(TextComponentType.WORD);
         textComponentWord2 = new TextComponent(TextComponentType.WORD);
         textComponentSentence = new TextComponent(TextComponentType.SENTENCE);
