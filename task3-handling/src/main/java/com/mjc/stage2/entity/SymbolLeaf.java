@@ -2,7 +2,7 @@ package com.mjc.stage2.entity;
 
 public class SymbolLeaf extends AbstractTextComponent{
 
-    private char value;
+    private final char value;
 
     public SymbolLeaf(char c) {
         super(TextComponentType.SYMBOL);
