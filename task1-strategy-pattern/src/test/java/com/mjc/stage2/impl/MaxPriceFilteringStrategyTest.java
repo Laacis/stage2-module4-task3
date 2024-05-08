@@ -12,11 +12,18 @@ public class MaxPriceFilteringStrategyTest {
     }
 
     @Test
-    public void MaxPriceFilteringStrategyFilterReturnTrue() {
+    public void MaxPriceFilteringStrategyFilterReturnTrueWhenPriceIsLess() {
         Product product = new Product("Test product", 09.99, "TEST");
         assert strategy.filter(product) : "Return expected to be True, but was: " + strategy.filter(product);
 
     }
+    @Test
+    public void MaxPriceFilteringStrategyFilterReturnTrueWhenMaxPriceIsExact() {
+        Product product = new Product("Test product", 10.00, "TEST");
+        assert strategy.filter(product) : "Return expected to be True, but was: " + strategy.filter(product);
+
+    }
+
     @Test
     public void MaxPriceFilteringStrategyFilterReturnFalse() {
         Product product = new Product("Test product", 19.99, "TEST");
